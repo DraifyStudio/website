@@ -1,14 +1,23 @@
 /* ==================== 基础设置 ==================== */
 :root {
   /* 色彩系统 */
-  --color-primary: #6366F1;
-  --color-primary-dark: #4F46E5;
-  --color-secondary: #10B981;
+  /* 主色：深空灰蓝，沉稳克制，用于按钮/标题/强交互 */
+  --color-primary: #0F172A;
+  --color-primary-dark: #1E293B; /* 悬停/按下态 */
+  
+  /* 辅助色：雾霾灰，用于标签/次级图标/分割线，不抢作品风头 */
+  --color-secondary: #64748B;
+  
+  /* 背景色：纯白+极浅冷灰，保持干净呼吸感 */
   --color-background: #FFFFFF;
-  --color-background-alt: #F9FAFB;
-  --color-text-primary: #111827;
-  --color-text-secondary: #6B7280;
-  --color-border: #E5E7EB;
+  --color-background-alt: #F8FAFC;
+  
+  /* 文字色：近黑+中灰，保证长阅读舒适度 */
+  --color-text-primary: #020617;
+  --color-text-secondary: #475569;
+  
+  /* 边框色：低对比冷灰，细腻划分区块 */
+  --color-border: #E2E8F0;
   
   /* 字体系统 */
   --font-sans: 'Manrope', 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -247,13 +256,13 @@ ul {
   top: 7px;
 }
 
-/* ==================== 英雄区域 ==================== */
+/* ==================== hero区域 ==================== */
 .hero {
-  padding: var(--spacing-xxl) 0 var(--spacing-xl);
+  padding: calc(var(--spacing-xxl) + 72px) 0 var(--spacing-xl); /* +72px 预留固定导航栏高度 */
   background: linear-gradient(135deg, var(--color-background) 0%, var(--color-background-alt) 100%);
   position: relative;
   overflow: hidden;
-  min-height: 90vh;
+  min-height: 100vh; /* 改为 100vh 确保首屏完整展示 */
   display: flex;
   align-items: center;
 }
@@ -505,13 +514,6 @@ ul {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-md);
-}
-
-.contact__hint {
-  font-size: 0.875rem;
-  color: var(--color-text-secondary);
-  text-align: center;
-  margin-top: var(--spacing-sm);
 }
 
 .form__group {
