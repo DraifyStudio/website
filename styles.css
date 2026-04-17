@@ -659,8 +659,12 @@ ul {
 }
 
 @media (max-width: 480px) {
+  body {
+    padding-top: 80px;
+  }
+  
   .hero {
-    padding: 120px var(--spacing-md) var(--spacing-xl); 
+    padding: var(--spacing-xl) 0;
     min-height: auto;
   }
   
