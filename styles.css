@@ -660,7 +660,7 @@ ul {
 
 @media (max-width: 480px) {
   .hero {
-    padding: var(--spacing-xl) 0;
+    padding: 120px var(--spacing-md) var(--spacing-xl); 
     min-height: auto;
   }
   
